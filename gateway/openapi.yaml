@@ -1,0 +1,59 @@
+
+openapi: 3.0.0
+info:
+  title: Hypernode Gateway API
+  version: 1.0.0
+  description: REST interface for interacting with Hypernode escrow smart contract
+servers:
+  - url: http://localhost:4000
+paths:
+  /start:
+    post:
+      summary: Start an escrow job
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cid:
+                  type: string
+                amount:
+                  type: integer
+                provider:
+                  type: string
+      responses:
+        '200':
+          description: Escrow created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  escrow:
+                    type: string
+  /release:
+    post:
+      summary: Release funds from escrow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                escrow:
+                  type: string
+                provider:
+                  type: string
+      responses:
+        '200':
+          description: Payment released
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  released:
+                    type: boolean
