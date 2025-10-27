@@ -1,0 +1,36 @@
+# File: Anchor.toml
+
+[programs.localnet]
+hypernode_escrow = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkgCqC9U5e5aZ"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+
+# File: programs/hypernode-escrow/Cargo.toml
+
+[package]
+name = "hypernode-escrow"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = "0.29.0"
+
+
+# File: Cargo.toml (root)
+
+[workspace]
+members = [
+    "programs/hypernode-escrow"
+]
