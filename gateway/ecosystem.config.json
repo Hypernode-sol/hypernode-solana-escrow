@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "hypernode-gateway",
+      "script": "server.js",
+      "cwd": "./gateway",
+      "watch": false,
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 4000
+      }
+    }
+  ]
+}
