@@ -1,4 +1,3 @@
-// File: programs/hypernode-escrow/src/lib.rs
 
 use anchor_lang::prelude::*;
 
