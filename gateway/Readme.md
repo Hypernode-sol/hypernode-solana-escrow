@@ -104,4 +104,4 @@ Sample test file: `tests/hypernode-escrow.ts`
 ---
 
 ## 🪪 License
-MIT © Hypernode Network
+MIT © Hypernode Solana
