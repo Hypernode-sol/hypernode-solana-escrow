@@ -1,5 +1,20 @@
 # 🧾 Hypernode Solana Escrow
 
+> **⚠️ DEPRECATED - November 9, 2025**
+>
+> This repository has been superseded by the [hypernode-facilitator](https://github.com/Hypernode-sol/hypernode-llm-deployer/tree/main/programs/hypernode-facilitator) program.
+>
+> **Migration Path:**
+> - Escrow functionality is now handled by the facilitator program using the x402 cross-chain intent protocol
+> - Payment automation is built-in (no manual release required)
+> - Multi-token and cross-chain support available
+>
+> **No New Development:** This repository is archived for historical reference only.
+
+---
+
+## Original Purpose
+
 Smart contract + tools for managing trustless, automated payments for computational jobs on the Hypernode Network using the Solana blockchain.
 
 ---
